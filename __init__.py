@@ -78,6 +78,6 @@ class FortuneAction(CaryAction):
     @property
     def response_body_html(self):
         return("<!DOCTYPE html><html><body><h2>{0}</h2>"
-               "<pre>{1}</pre></body</html>".format(
+               "<pre>{1}</pre></body></html>".format(
                    self._intro_line, self._message_body
                    ))
