@@ -1,4 +1,4 @@
-from carycommand import CaryCommand, CaryAction
+from cary.carycommand import CaryCommand, CaryAction
 import random
 from subprocess import Popen, PIPE
 
