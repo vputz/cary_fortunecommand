@@ -9,15 +9,16 @@ a somewhat random response.
 config items
 COWSAY_PATH:string path to the cowsay executable
 FORTUNE_PATH:string path to the fortune executable
-RANDOM_COWS: {short:long} dictionary of cows with description
-"""
+RANDOM_COWS: {short:long} dictionary of cows with description, ie
 
-STANDARD_COWS = dict(
+RANDOM_COWS = dict(
     bunny="bouncing bunny of arcane knowledge",
     default="standard cow of wisdom",
     sheep="fluffy sheep of hubris",
     squirrel="twitchy squirrel of advice"
     )
+"""
+
 
 class FortuneCommand(CaryCommand):
 
@@ -47,7 +48,7 @@ class FortuneAction(CaryAction):
 
     def random_cow(self):
         if 'RANDOM_COWS' in self.config:
-            result = random.choice(self.config['RANDOM_COWS'].items())
+            result = random.choice(list(self.config['RANDOM_COWS'].items()))
         else:
             result = ("default", "standard cow of wisdom")
         return result
