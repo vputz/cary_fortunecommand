@@ -10,10 +10,10 @@ replies with the fortune
 
 setup(
     name='cary_fortunecommand',
-    version='1.0.0',
+    version='1.0.1',
+    url='https://github.com/vputz/cary',
     description='cary command for the unix cowsay and fortune commands',
     long_description=long_description,
-    # url='https://github.com/vputz/cary',
     author='Victor Putz',
     author_email='vputz@nyx.net',
 
